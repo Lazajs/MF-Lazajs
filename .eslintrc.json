@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard",
+        "eslint-config-next"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js",".jsx", ".tsx"] }],
+        "react/no-unknown-property": [
+            2,
+            {
+                "ignore": [
+                "jsx"
+                ]
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "no-new": "off",
+        "react-hooks/exhaustive-deps": "off"
+    }
 }

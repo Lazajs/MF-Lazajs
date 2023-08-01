@@ -10,7 +10,7 @@ const nextConfig = {
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
           './Section': './src/components/Section',
-        }
+        },
       })
     )
     return config
